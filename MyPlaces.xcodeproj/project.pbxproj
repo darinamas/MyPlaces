@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		44CA97A3265BC395005C9BDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA97A2265BC395005C9BDD /* AppDelegate.swift */; };
 		44CA97A5265BC395005C9BDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA97A4265BC395005C9BDD /* SceneDelegate.swift */; };
-		44CA97A7265BC395005C9BDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA97A6265BC395005C9BDD /* ViewController.swift */; };
 		44CA97AA265BC395005C9BDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CA97A8265BC395005C9BDD /* Main.storyboard */; };
 		44CA97AC265BC398005C9BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44CA97AB265BC398005C9BDD /* Assets.xcassets */; };
 		44CA97AF265BC398005C9BDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44CA97AD265BC398005C9BDD /* LaunchScreen.storyboard */; };
+		44CA97BA265BC436005C9BDD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CA97B9265BC436005C9BDD /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		44CA979F265BC395005C9BDD /* MyPlaces.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPlaces.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44CA97A2265BC395005C9BDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44CA97A4265BC395005C9BDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		44CA97A6265BC395005C9BDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		44CA97A9265BC395005C9BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44CA97AB265BC398005C9BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44CA97AE265BC398005C9BDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44CA97B0265BC398005C9BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44CA97B9265BC436005C9BDD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +58,8 @@
 			children = (
 				44CA97A2265BC395005C9BDD /* AppDelegate.swift */,
 				44CA97A4265BC395005C9BDD /* SceneDelegate.swift */,
-				44CA97A6265BC395005C9BDD /* ViewController.swift */,
 				44CA97A8265BC395005C9BDD /* Main.storyboard */,
+				44CA97B9265BC436005C9BDD /* MainViewController.swift */,
 				44CA97AB265BC398005C9BDD /* Assets.xcassets */,
 				44CA97AD265BC398005C9BDD /* LaunchScreen.storyboard */,
 				44CA97B0265BC398005C9BDD /* Info.plist */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44CA97A7265BC395005C9BDD /* ViewController.swift in Sources */,
+				44CA97BA265BC436005C9BDD /* MainViewController.swift in Sources */,
 				44CA97A3265BC395005C9BDD /* AppDelegate.swift in Sources */,
 				44CA97A5265BC395005C9BDD /* SceneDelegate.swift in Sources */,
 			);
@@ -289,6 +289,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX7MV54CYW;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +309,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DX7MV54CYW;
 				INFOPLIST_FILE = MyPlaces/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
