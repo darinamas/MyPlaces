@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--My places-->
         <scene sceneID="2PN-4d-TZV">
             <objects>
                 <tableViewController id="2v6-9f-9l0" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,7 @@
                             <outlet property="delegate" destination="2v6-9f-9l0" id="lT8-bl-Fbd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="FQN-aX-qFg"/>
+                    <navigationItem key="navigationItem" title="My places" id="FQN-aX-qFg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1B-Ai-zTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,6 +44,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6j8-T0-LEx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="2v6-9f-9l0" kind="relationship" relationship="rootViewController" id="5ay-4U-u7e"/>
