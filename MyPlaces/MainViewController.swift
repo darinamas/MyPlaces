@@ -8,11 +8,9 @@
 import UIKit
 
 class MainViewController: UITableViewController {
+
     
-    let restaurantNames = [
-        "Burger Heroes", "Kitchen", "Bonsai", "Sherlock Holmes",
-        "Speak Easy", "Morris Pub", "Love&Life"
-    ]
+    let places = Place.getPlaces()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,14 +22,17 @@ class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     
-        return restaurantNames.count
+        return places.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
 
-        cell.nameLabel.text = restaurantNames[indexPath.row] // takes value from array restaurantName
-        cell.imageOfPlaces.image = UIImage(named: restaurantNames[indexPath.row]) //images for the restaurant
+        cell.nameLabel.text = places[indexPath.row].name // takes value from array restaurantName
+        cell.locationLabel.text = places[indexPath.row].location
+        cell.typeLabel.text = places[indexPath.row].type
+        
+        cell.imageOfPlaces.image = UIImage(named: places[indexPath.row].image) //images for the restaurant
         cell.imageOfPlaces.layer.cornerRadius = cell.imageOfPlaces.frame.size.height / 2  // round images
         cell.imageOfPlaces.clipsToBounds = true //
         
@@ -40,11 +41,7 @@ class MainViewController: UITableViewController {
   
 
     //MARK: - Table view delegate
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
-    }
-    
+
     
     /*
     // Override to support conditional editing of the table view.
