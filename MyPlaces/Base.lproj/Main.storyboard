@@ -12,18 +12,74 @@
         <scene sceneID="2PN-4d-TZV">
             <objects>
                 <tableViewController id="2v6-9f-9l0" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cpB-sH-4H5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cpB-sH-4H5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="heS-15-xQH">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="heS-15-xQH" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="heS-15-xQH" id="Y4h-SZ-FkZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dUU-lG-wlj">
+                                            <rect key="frame" x="15" y="10" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="0np-pX-wab"/>
+                                                <constraint firstAttribute="width" constant="65" id="4tQ-os-eGg"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUL-2g-6KG">
+                                            <rect key="frame" x="95" y="9" width="303" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="I18-LZ-9h6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLD-Ii-JGb">
+                                            <rect key="frame" x="95" y="35" width="315" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="cVO-cF-99h"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEr-qW-8Xl">
+                                            <rect key="frame" x="95" y="54.5" width="303" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="kVH-6b-XxK"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="dUU-lG-wlj" firstAttribute="leading" secondItem="Y4h-SZ-FkZ" secondAttribute="leading" constant="15" id="1z0-dR-vGp"/>
+                                        <constraint firstItem="mUL-2g-6KG" firstAttribute="leading" secondItem="dUU-lG-wlj" secondAttribute="trailing" constant="15" id="6O4-d7-gDx"/>
+                                        <constraint firstItem="iEr-qW-8Xl" firstAttribute="top" secondItem="pLD-Ii-JGb" secondAttribute="bottom" constant="1.5" id="BjK-4G-qvQ"/>
+                                        <constraint firstItem="mUL-2g-6KG" firstAttribute="top" secondItem="Y4h-SZ-FkZ" secondAttribute="top" constant="9" id="C50-uW-Rub"/>
+                                        <constraint firstAttribute="trailing" secondItem="mUL-2g-6KG" secondAttribute="trailing" constant="16" id="LIy-xp-Pjm"/>
+                                        <constraint firstItem="pLD-Ii-JGb" firstAttribute="trailing" secondItem="Y4h-SZ-FkZ" secondAttribute="trailingMargin" constant="16" id="UOo-uv-IQs"/>
+                                        <constraint firstItem="pLD-Ii-JGb" firstAttribute="top" secondItem="mUL-2g-6KG" secondAttribute="bottom" constant="5" id="ckw-rB-3Jb"/>
+                                        <constraint firstItem="iEr-qW-8Xl" firstAttribute="leading" secondItem="dUU-lG-wlj" secondAttribute="trailing" constant="15" id="fLP-6Z-Ctm"/>
+                                        <constraint firstItem="pLD-Ii-JGb" firstAttribute="leading" secondItem="dUU-lG-wlj" secondAttribute="trailing" constant="15" id="h3r-je-eet"/>
+                                        <constraint firstAttribute="bottom" secondItem="iEr-qW-8Xl" secondAttribute="bottom" constant="9.5" id="nNe-HJ-MaA"/>
+                                        <constraint firstItem="dUU-lG-wlj" firstAttribute="centerY" secondItem="Y4h-SZ-FkZ" secondAttribute="centerY" id="rsf-1s-gBV"/>
+                                        <constraint firstAttribute="trailing" secondItem="iEr-qW-8Xl" secondAttribute="trailing" constant="16" id="uxt-TW-lpw"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlaces" destination="dUU-lG-wlj" id="ej0-VQ-ff3"/>
+                                    <outlet property="locationLabel" destination="pLD-Ii-JGb" id="xO4-1V-CgF"/>
+                                    <outlet property="nameLabel" destination="mUL-2g-6KG" id="Azn-eW-PcS"/>
+                                    <outlet property="typeLabel" destination="iEr-qW-8Xl" id="f5D-j9-D7f"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -35,7 +91,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1B-Ai-zTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="469" y="106"/>
+            <point key="canvasLocation" x="468.11594202898556" y="105.80357142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kPd-y1-PuZ">
